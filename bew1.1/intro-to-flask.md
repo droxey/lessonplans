@@ -1,5 +1,9 @@
 # 📜 Day 7: Introduction to Web Servers in Flask
 
+<p align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Flask_logo.svg" height="150">
+</p>
+
 <!--
 What students know so far...
 
@@ -11,6 +15,14 @@ Week 1
 Week 2
     1. [CS] Pseudocode and Flowchart Diagrams
     2. [BEW] Request-Response Cycle and MVC Architecture
+
+
+TODO: Flask Starter Pack with pre-built static front end
+
+TODO: Questions for Alan:
+  - Will they know how to import Python packages by Day 7?
+  - Will they know virtual environments? Should they yet?
+  -
 -->
 
 ### ⏱ Agenda
@@ -60,6 +72,14 @@ Week 2
 4. Finally define `__main__`
 5. Demo the function by running `flask run` on the terminal
 
+### Live Code: Making A Static Site Dynamic
+
+#### Step by Step
+
+1. Use `flask-starterpack` to demonstrate how to make a static site dynamic
+2. Explain why static HTML and CSS  goes in the `static` folder
+3. Serve the static HTML page via `http://localhost:8000/index.html` first
+4. Show how to serve the template in the `templates` directory with Flask
 
 ```python
 # 1. import Flask
@@ -100,5 +120,6 @@ HW: create a design/outline for a simple Gif search site that returns a list of 
 ## 📚 Resources & Credits
 
 - https://blog.codeanalogies.com/2018/04/26/web-servers-explained-by-running-a-microbrewery/
-
-
+- https://en.wikipedia.org/wiki/Flask_(web_framework)
+- https://github.com/pallets/flask
+- https://flask.palletsprojects.com/en/1.1.x/
