@@ -31,29 +31,35 @@ Week 2
 
 ## 📖 Overview
 
+<!--
 - TT: overview of how we learned basic frontend, but how do we drive it forward? What about data?
-- TT: Review of Python, you all were introduced to this via Prework
 - TT: Overview of Flask: what it is, why we use it
-- TT: Python is our backend (what’s a backend?) HTML/CSS is our frontend (what’s a frontend?)
+-->
 
-### TT: A Python Function
+### Live Code: A Python Function
 
-  1. Live coding step-by-step
-        1. Create a directory for the project named `project`
-        2. Change to the `project` directory
-        3. Create a file named `app.py` and explain that this is where the code will live
-        4. Write a function that solves a distinct problem
+<!-- TT: Review of Python, you all were introduced to this via prework -->
+<!-- Activity: some easy interview problem to solve in Python to get them warmed up again -->
 
-### TT: Exposing the Function on the Web
+#### Step by Step
 
-  1. Live coding step-by-step
-        1. Add `@app.route` to the top of the function definition and explain that this **decorator** on top of the function makes it an **endpoint**.
-        2. Add flask imports
-        3. Define `app` variable
-        4. Finally define `__main__`
-  2. Demo the function by running `flask run` on the terminal
+1. Create a directory for the project named `project`
+2. Change to the `project` directory
+3. Create a file named `app.py` and explain that this is where the code will live
+4. Write a function that solves a distinct problem
 
-###
+### Live Code: Exposing the Function on the Web
+
+<!-- TT: Python is our backend (what’s a backend?) HTML/CSS is our frontend (what’s a frontend?) -->
+
+#### Step by Step
+
+1. Add `@app.route` to the top of the function definition and explain that this **decorator** on top of the function makes it an **endpoint**.
+2. Add flask imports
+3. Define `app` variable
+4. Finally define `__main__`
+5. Demo the function by running `flask run` on the terminal
+
 
 ```python
 # 1. import Flask
@@ -80,7 +86,7 @@ if __name__ == "__main__":
 
 ## 💻 Activity
 
-- Activity: some easy interview problem to solve in Python to get them warmed up again
+
 - Activity: first 2 chapters of this tutorial
 
 ## 🌴 [10m] Break
