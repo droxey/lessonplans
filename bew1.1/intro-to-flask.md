@@ -29,8 +29,8 @@ TODO: Questions for Alan:
 
 1. [🏆 Learning Objectives](#%f0%9f%8f%86-learning-objectives)
 2. [📖 Overview](#%f0%9f%93%96-overview)
-3. [Sample](#sample)
-4. [🌴 [10m] Break -->](#%f0%9f%8c%b4-10m-break)
+3. [💻 Activity](#%f0%9f%92%bb-activity)
+4. [🌴 [10m] Break](#%f0%9f%8c%b4-10m-break)
 5. [🌃 After Class](#%f0%9f%8c%83-after-class)
 6. [📚 Resources & Credits](#%f0%9f%93%9a-resources--credits)
 
@@ -52,12 +52,11 @@ TODO: Questions for Alan:
 
 #### Step by Step
 
-1. Use `flask-starterpack` to demonstrate how to make a static site dynamic
-2. Explain why static HTML and CSS  goes in the `static` folder
-3. Serve the static HTML page via `http://localhost:8000/index.html` first
-4. Ask "How many URLs have `.html` at the end of them these days?"
-   1. Clean URLs / Semantic URLs definition and why we use them
-5. Show how to serve the template in the `templates` directory with Flask
+1. Demo the static site in the browser by double clicking the `index.html` file in Finder and opening it in the browser
+2. Explain that we'll be making this static site dynamic today using Python and Flask
+3. Note that the URL in the browser begins with `file:///` instead of `http://`
+4. Explain why static HTML and CSS  goes in the `static` folder
+5. Run `flask run` in the project directory to serve the static HTML page via Flask at `http://localhost:8000/index.html`
 
 ### Adding a Python Function to the Project
 
@@ -66,19 +65,26 @@ TODO: Questions for Alan:
 
 #### Step by Step
 
-1. Start in the directory that contains a pre-made static site
-2. Demo the static site in the browser and explain that we'll be making this static site dynamic today using Python and Flask
-3. TODO: Define the problem we'll solve
-4. Create a file named `app.py` and explain that this is where the code will live
+1. Create a file named `app.py` and explain that this is where the code will live
 
     ```bash
     touch app.py
     ```
 
-5. Define a problem then think / pair / share the function to solve it. Solution below:
+2. Ask students to open `app.py` in their editor
 
-    ```python
-    ```
+3. **Activity**: Think / Pair / Share: Pair program a function that increments a counter every time someone calls the function.
+
+   **Solution**:
+
+      ```python
+      hits = 0
+
+      def hit_counter():
+          """Returns a count of how many times this function was called."""
+          hits += 1
+          return hits
+      ```
 
 ### Endpoints: How to Call a Function on the Web
 
@@ -86,62 +92,79 @@ TODO: Questions for Alan:
 
 #### Step by Step
 
-1. Add `@app.route` to the top of the function definition and explain that this **decorator** on top of the function makes it an **endpoint**:
+1.  Add flask imports:
 
     ```python
+    from flask import Flask
+
+
+    def function():
+        return 'hi'
     ```
 
-2. Add flask imports:
+2.  Define `app` variable:
 
     ```python
+    from flask import Flask
+
+    app = Flask(__name__)
+
+
+    def function():
+        return 'hi'
     ```
 
-3. Define `app` variable:
+3. Add `@app.route` to the top of the function definition and explain that this **decorator** on top of the function makes it an **endpoint**:
 
     ```python
+    from flask import Flask
+
+    app = Flask(__name__)
+
+
+    @app.route("/")
+    def function():
+        return 'hi'
     ```
 
-4. Finally define `__main__`:
+4. Last, define `__main__`:
 
     ```python
+    from flask import Flask
+
+    app = Flask(__name__)
+
+
+    @app.route("/")
+    def function():
+        return 'hi'
+
+
+    if __name__ == "__main__":
+        app.run(debug=True)
     ```
 
 5. Demo the function by running `flask run` on the terminal:
 
     ```bash
+    flask run
     ```
 
-## Sample
+### Stretch Challenges
 
-```python
-# 1. import Flask
-from flask import Flask
+1. What is `__name__`? What does it do in `app.py`?
+2. What flag allows you to reload flask every time you make a change to `app.py`?
+3. Currently, the number of hits resets back to `0` when we run `flask run`
+      1. Why does this happen?
+      2. Can you use what you learned about MongoDB to fix it?
 
-# 2. Create an app, being sure to pass __name__
-app = Flask(__name__)
-
-# 3. Define what to do when a user hits the index route
-@app.route("/")
-def home():
-    print("Server received request for 'Home' page...")
-    return "Welcome to my 'Home' page!"
-
-# 4. Define what to do when a user hits the /about route
-@app.route("/about")
-def about():
-    print("Server received request for 'About' page...")
-    return "Welcome to my 'About' page!"
-
-if __name__ == "__main__":
-  app.run(debug=True)
-```
-
-<!-- ## 💻 Activity
-
+<!--
+## 💻 Activity
 
 - Activity: first 2 chapters of this tutorial
 
-## 🌴 [10m] Break -->
+## 🌴 [10m] Break
+ -->
 
 ## 🌃 After Class
 
