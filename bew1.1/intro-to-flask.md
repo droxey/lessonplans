@@ -29,8 +29,8 @@ TODO: Questions for Alan:
 
 1. [🏆 Learning Objectives](#%f0%9f%8f%86-learning-objectives)
 2. [📖 Overview](#%f0%9f%93%96-overview)
-3. [💻 Activity](#%f0%9f%92%bb-activity)
-4. [🌴 [10m] Break](#%f0%9f%8c%b4-10m-break)
+3. [Sample](#sample)
+4. [🌴 [10m] Break -->](#%f0%9f%8c%b4-10m-break)
 5. [🌃 After Class](#%f0%9f%8c%83-after-class)
 6. [📚 Resources & Credits](#%f0%9f%93%9a-resources--credits)
 
@@ -48,38 +48,70 @@ TODO: Questions for Alan:
 - TT: Overview of Flask: what it is, why we use it
 -->
 
-### Live Code: A Python Function
-
-<!-- TT: Review of Python, you all were introduced to this via prework -->
-<!-- Activity: some easy interview problem to solve in Python to get them warmed up again -->
-
-#### Step by Step
-
-1. Create a directory for the project named `project`
-2. Change to the `project` directory
-3. Create a file named `app.py` and explain that this is where the code will live
-4. Write a function that solves a distinct problem
-
-### Live Code: Exposing the Function on the Web
-
-<!-- TT: Python is our backend (what’s a backend?) HTML/CSS is our frontend (what’s a frontend?) -->
-
-#### Step by Step
-
-1. Add `@app.route` to the top of the function definition and explain that this **decorator** on top of the function makes it an **endpoint**.
-2. Add flask imports
-3. Define `app` variable
-4. Finally define `__main__`
-5. Demo the function by running `flask run` on the terminal
-
-### Live Code: Making A Static Site Dynamic
+### Making A Static Site Dynamic
 
 #### Step by Step
 
 1. Use `flask-starterpack` to demonstrate how to make a static site dynamic
 2. Explain why static HTML and CSS  goes in the `static` folder
 3. Serve the static HTML page via `http://localhost:8000/index.html` first
-4. Show how to serve the template in the `templates` directory with Flask
+4. Ask "How many URLs have `.html` at the end of them these days?"
+   1. Clean URLs / Semantic URLs definition and why we use them
+5. Show how to serve the template in the `templates` directory with Flask
+
+### Adding a Python Function to the Project
+
+<!-- TT: Review of Python, you all were introduced to this via prework -->
+<!-- Activity: some easy interview problem to solve in Python to get them warmed up again -->
+
+#### Step by Step
+
+1. Start in the directory that contains a pre-made static site
+2. Demo the static site in the browser and explain that we'll be making this static site dynamic today using Python and Flask
+3. TODO: Define the problem we'll solve
+4. Create a file named `app.py` and explain that this is where the code will live
+
+    ```bash
+    touch app.py
+    ```
+
+5. Define a problem then think / pair / share the function to solve it. Solution below:
+
+    ```python
+    ```
+
+### Endpoints: How to Call a Function on the Web
+
+<!-- TT: Python is our backend (what’s a backend?) HTML/CSS is our frontend (what’s a frontend?) -->
+
+#### Step by Step
+
+1. Add `@app.route` to the top of the function definition and explain that this **decorator** on top of the function makes it an **endpoint**:
+
+    ```python
+    ```
+
+2. Add flask imports:
+
+    ```python
+    ```
+
+3. Define `app` variable:
+
+    ```python
+    ```
+
+4. Finally define `__main__`:
+
+    ```python
+    ```
+
+5. Demo the function by running `flask run` on the terminal:
+
+    ```bash
+    ```
+
+## Sample
 
 ```python
 # 1. import Flask
@@ -104,12 +136,12 @@ if __name__ == "__main__":
   app.run(debug=True)
 ```
 
-## 💻 Activity
+<!-- ## 💻 Activity
 
 
 - Activity: first 2 chapters of this tutorial
 
-## 🌴 [10m] Break
+## 🌴 [10m] Break -->
 
 ## 🌃 After Class
 
